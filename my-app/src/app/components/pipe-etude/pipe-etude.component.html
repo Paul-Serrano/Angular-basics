@@ -1,0 +1,111 @@
+<div>
+  <h1>Les Pipes</h1>
+  <h3 ngNonBindable>Syntaxe : {{chaîne a modifier | nom du pipe}}</h3>
+  <ul>
+    <li>Les Pipes natives d'angular</li>
+  </ul>
+  <p>- Le pipe Currency</p>
+  <p>
+    <span ngNonBindable>{{ 1234.56 | currency : "USD" }}</span
+    >-> {{ 1234.56 | currency : "USD" }}
+  </p>
+  <p>
+    <span ngNonBindable>{{ 1234.56 | currency : "CAD" }}</span
+    >-> {{ 1234.56 | currency : "CAD" }}
+  </p>
+  <p>
+    <span ngNonBindable>{{ 1234.56 | currency : "EUR" }}</span
+    >-> {{ 1234.56 | currency : "EUR" }}
+  </p>
+
+  <p style="margin-top: 40px">- Le pipe DateVal</p>
+  <p ngNonBindable>{{ aDate | date : "shortTime" }}</p>
+  <p>{{ aDate | date : "shortTime" }}</p>
+
+  <p ngNonBindable>{{ aDate | date : "fullDate" }}</p>
+  <p>{{ aDate | date : "fullDate" }}</p>
+
+  <p ngNonBindable>{{ aDate | date : "d/M/y" }}</p>
+  <p>{{ aDate | date : "d/M/y" }}</p>
+
+  <p ngNonBindable>{{ aDate | date }}</p>
+  <p>{{ aDate | date }}</p>
+
+  <p ngNonBindable>{{ aDate | date : "longDate" }}</p>
+  <p>{{ aDate | date : "longDate" }}</p>
+
+  <p ngNonBindable>{{ aDate | date : "dd/MM/yy, à HH:mm" }}</p>
+  <p>{{ aDate | date : "dd/MM/yy, à HH:mm" }}</p>
+
+  <p ngNonBindable>{{ aDate | date : "à HH:mm, le d MMMM yyyy" }}</p>
+  <p>{{ aDate | date : "à HH:mm, le d MMMM yyyy" }}</p>
+
+  <p style="margin-top: 40px">- Le pipe DecimalPipe</p>
+  <p ngNonBindable>{{ 3.14159265 | number : "3.1-2" }}</p>
+  <p>{{ 3.14159265 | number : "3.1-2" }}</p>
+
+  <p ngNonBindable>{{ 3.14159265 | number : "1.4-6" }}</p>
+  <p>{{ 3.14159265 | number : "1.4-6" }}</p>
+
+  <p style="margin-top: 40px">- Le pipe JsonPipe</p>
+  <p ngNonBindable>{{ someJSobject }}</p>
+  <p>{{ someObject }}</p>
+
+  <p ngNonBindable>{{ someJSobject | json }}</p>
+  <p>{{ someObject | json }}</p>
+
+  <p style="margin-top: 40px">- Le pipe TitleCase</p>
+  <p ngNonBindable>{{ "UNE CHAINE quelconque MAL Formatée" | titlecase }}</p>
+  <p>{{ "UNE CHAINE quelconque MAL Formatée" | titlecase }}</p>
+
+  <p>- Le pipe LowerCasePipe</p>
+  <p ngNonBindable>{{ "UNE CHAINE en MAJUSCULE" | lowercase }}</p>
+  <p>{{ "UNE CHAINE en MAJUSCULE" | lowercase }}</p>
+
+  <p>- Le pipe UpperCasePipe</p>
+  <p ngNonBindable>{{ "une chaine en minuscule" | uppercase }}</p>
+  <p>{{ "une chaine en minuscule" | uppercase }}</p>
+
+  <p style="margin-top: 40px">- Le pipe PercentPipe</p>
+  <p ngNonBindable>{{ 0.123456 | percent }}</p>
+  <p>{{ 0.123456 | percent }}</p>
+
+  <p ngNonBindable>{{ 0.123456 | percent : "2.1-2" }}</p>
+  <p>{{ 0.123456 | percent : "2.1-2" }}</p>
+
+  <p ngNonBindable>{{ 42 | percent : "10.4-4" }}</p>
+  <p>{{ 0.123456 | percent : "10.4-4" }}</p>
+
+  <p style="margin-top: 40px">- Le pipe SlicePipe</p>
+  <p ngNonBindable>{{ [1, 2, 3, 4, 5, 6] | slice : 1 : 3 }}</p>
+  <p>{{ [1, 2, 3, 4, 5, 6] | slice : 1 : 3 }}</p>
+
+  <p ngNonBindable>{{ [1, 2, 3, 4, 5, 6] | slice : 2 }}</p>
+  <p>{{ [1, 2, 3, 4, 5, 6] | slice : 2 }}</p>
+
+  <p ngNonBindable>{{ [1, 2, 3, 4, 5, 6] | slice : 2 : -1 }}</p>
+  <p>{{ [1, 2, 3, 4, 5, 6] | slice : 2 : -1 }}</p>
+
+  <pre ngNonBindable>
+    &lt;ul&gt;
+      &lt;li *ngFor=&quot;let v of [1,2,3,4,5,6] | slice:2:-1&quot;&gt;
+        {{ v }}
+      &lt;/li&gt;
+    &lt;/ul&gt;
+</pre
+  >
+
+  <ul>
+    <li *ngFor="let v of [1, 2, 3, 4, 5, 6] | slice : 2 : -1">
+      {{ v }}
+    </li>
+  </ul>
+
+  <ul style="margin-top: 50px">
+    <li>Les Pipes Custom</li>
+  </ul>
+
+  <p>- Le pipe custom UcFirstPipe</p>
+  <p ngNonBindable>{{ "une chaine en minuscule" | ucfirst }}</p>
+  <p>{{ "une chaine en minuscule" | ucfirst }}</p>
+</div>

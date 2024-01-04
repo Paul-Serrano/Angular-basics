@@ -1,0 +1,24 @@
+<div class="green-border">
+  <h2>Liste des Employés</h2>
+  <!-- 
+    Nous utilisons des directives pour rendre le rendu automatique (*ngFor) et conditionnel (*ngIf)
+  -->
+  <ul
+    *ngFor="
+      let employe of listEmployes;
+      let idx = index;
+      let isFirst = first;
+      let isOdd = odd;
+      let isLast = last;
+      let isEven = even
+    "
+    [ngStyle]="{ color: isFirst ? 'blue' : '' }"
+    [ngClass]="{ red: isLast }"
+  >
+    <li *ngIf="isFirst">Premier Employé</li>
+    <li *ngIf="!isFirst">Employé n° {{ idx + 1 }}</li>
+    <li>Nom: {{ employe.nom }}</li>
+    <li>Prénom: {{ employe.prenom }}</li>
+    <li>Fonction: {{ employe.fonction }}</li>
+  </ul>
+</div>
