@@ -1,0 +1,5 @@
+<div class="red-border">
+  <p>parent-component works!</p>
+  <p>Vous avez cliqué sur : {{ clickedData }}</p>
+  <app-child-component [parentData]="data" (backEvent)="getElement($event)" />
+</div>

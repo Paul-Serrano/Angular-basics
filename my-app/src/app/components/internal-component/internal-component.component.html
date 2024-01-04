@@ -1,0 +1,12 @@
+<div class="border-blue">
+  <p>internal-component works!</p>
+  <h5>Communication unidirectionnelle, JS -> Template</h5>
+  <input type="text" [value]="text" />
+  <p>La valeur de la prop text de la classe est : {{ text }}</p>
+
+  <h5>Communication bidirectionnelle, JS -> Template -> JS</h5>
+  <input type="text" [value]="text2" [(ngModel)]="text2" />
+  <p>text2 value : {{ text2 }}</p>
+
+  <h5>Communication intercomponent, JS -> Template -> JS</h5>
+</div>
